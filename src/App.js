@@ -95,89 +95,99 @@ const Gif = styled.img`
   border-radius: 10px;
 `;
 
+const Button = styled.button`
+  font-size: 1.2em;
+  padding: 15px 30px;
+  background-color: ${(props) => (props.primary ? "#f6b5c0" : "#f0a0b9")};
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
 // Full Screen Sections
-const HomePage = ({ className }) => (
-  <Element name="home">
-    <Section className={className}>
-      <Title>Heyy Maria {String.fromCodePoint('0x1FAE3')}</Title>
-      <Message>
-        I didnt knew how and what to say so I have created this to apologise for yesterday. {String.fromCodePoint('0x1F607')}
-      </Message>
-      <Message>
-        Scroll Down \/
-      </Message>
-      <HeartIcon/>
-    </Section>
-  </Element>
-);
 
-const SorryPage = ({ className }) => (
-  <Element name="sorry">
-    <Section className={className}>
-      <Title>I am really Sorry</Title>
-      <Message>
-        I am really sorry, I know I crossed the line yesterday. {String.fromCodePoint('0x1F972')}
-      </Message>
-      <Message>
-        I really regret it.
-      </Message>
-      <Message>
-        Scroll Down \/
-      </Message>
-      <HeartIcon/>
-    </Section>
-  </Element>
-);
-
-
-
-
-const MistakePage = ({ className }) => (
-  <Element name="mistake">
-    <Section className={className}>
-      <Title>It Was a Mistake</Title>
-      <Message>
-        It really was a mistake. But you are so amazing and beautiful {String.fromCodePoint('0x1FAE0')}, you cant blame me for that {String.fromCodePoint('0x1FAE3')}. I am not a emotionless robot afterall {String.fromCodePoint('0x1F602')}
-      </Message>
-      <Message>
-        Scroll Down \/
-      </Message>
-      <HeartIcon/>
-    </Section>
-  </Element>
-);
-
-const ThankYouPage = ({ className }) => (
-  <Element name="thank-you">
-    <Section className={className}>
-      <Title>Thank You</Title>
-      <Message>
-        Thank you haha. I promise this won't happen again. Lots of kisses for you {String.fromCodePoint('0x1F618')}
-      </Message>
-      <HeartIcon/>
-      <iframe src="https://giphy.com/embed/4YNyqb4VMiIQ8Ipz8n" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-      </Section>
-  </Element>
-);
 // App Component with Scroll Behavior
 const App = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [scrolling, setScrolling] = useState(false); // Prevent multiple transitions
   const threshold = 700; // Scroll distance threshold (in pixels)
   const [end, setEnd] = useState(0)
+
+
+  const HomePage = ({ className }) => (
+    <Element name="home">
+      <Section className={className}>
+        <Title>Heyy Maria {String.fromCodePoint('0x1FAE3')}</Title>
+        <Message>
+          I didnt knew how and what to say so I have created this to apologise for yesterday. {String.fromCodePoint('0x1F607')}
+        </Message>
+        <HeartIcon/>
+        <Button onClick={handleClick}>
+          Click me !!
+        </Button>
+      </Section>
+    </Element>
+  );
+  
+  const SorryPage = ({ className }) => (
+    <Element name="sorry">
+      <Section className={className}>
+        <Title>I am really Sorry</Title>
+        <Message>
+          I am really sorry, I know I crossed the line yesterday. {String.fromCodePoint('0x1F972')}
+        </Message>
+        <Message>
+          I really regret it.
+        </Message>
+        <HeartIcon/>
+        <Button onClick={handleClick}>
+        Click me !!
+        </Button>
+      </Section>
+    </Element>
+  );
+  
+  
+  
+  
+  const MistakePage = ({ className }) => (
+    <Element name="mistake">
+      <Section className={className}>
+        <Title>It Was a Mistake</Title>
+        <Message>
+          It really was a mistake. But you are so amazing and beautiful {String.fromCodePoint('0x1FAE0')}, you cant blame me for that {String.fromCodePoint('0x1FAE3')}. I am not a emotionless robot afterall {String.fromCodePoint('0x1F602')}
+        </Message>
+        <HeartIcon/>
+        <Button onClick={handleClick}>
+        Click me !!
+        </Button>
+      </Section>
+    </Element>
+  );
+  
+  const ThankYouPage = ({ className }) => (
+    <Element name="thank-you">
+      <Section className={className}>
+        <Title>Thank You</Title>
+        <Message>
+          Thank you haha. I promise this won't happen again. Lots of kisses for you {String.fromCodePoint('0x1F618')}
+        </Message>
+        <HeartIcon/>
+        <iframe src="https://giphy.com/embed/4YNyqb4VMiIQ8Ipz8n" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        </Section>
+    </Element>
+  );
+
   // Detect scroll and change active section with threshold
-  const handleScroll = (e) => {
-    if (scrolling) return; // Prevent multiple triggers while scrolling
-
-    const scrollY = window.scrollY;
-    const screenHeight = window.innerHeight;
-
-    if (e.deltaY > 0) {
-      // Scrolling down
-      if (scrollY + screenHeight >= threshold) {
-        setScrolling(true);
-        setActiveSection((prev) => {
-          switch (prev) {
+  const handleClick = () => {
+        setActiveSection((activeSection) => {
+          switch (activeSection) {
             case "home":
               return "sorry";
             case "sorry":
@@ -185,42 +195,11 @@ const App = () => {
             case "mistake":
               return "forgive-me";
             default:
-              return prev;
+              return activeSection;
           }
         });
-      }
-    } else {
-      // Scrolling up
-      if (scrollY <= threshold) {
-        setScrolling(true);
-        setActiveSection((prev) => {
-          switch (prev) {
-            case "forgive-me":
-              return "mistake";
-            case "mistake":
-              return "sorry";
-            case "sorry":
-              return "home";
-            default:
-              return prev;
-          }
-        });
-      }
-    }
   };
 
-  // Reset scrolling state after transition completes
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setScrolling(false); // Allow the next scroll transition
-    }, 1000); // Adjust timeout if needed to match the animation duration
-    return () => clearTimeout(timer);
-  }, [activeSection]);
-
-  useEffect(() => {
-    window.addEventListener("wheel", handleScroll, { passive: true });
-    return () => window.removeEventListener("wheel", handleScroll);
-  }, [scrolling]);
 
   return (
     <Container>

@@ -2,7 +2,7 @@
   "name": "apology-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://pratham28.github.io/sorry-app/",
+  "homepage": "https://Prathamesh28.github.io/sorry_app/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },  
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -40,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
   }
 }
