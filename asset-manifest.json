@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sorry_app/static/css/main.e6c13ad2.css",
-    "main.js": "/sorry_app/static/js/main.5e5a6d4e.js",
+    "main.js": "/sorry_app/static/js/main.2a3b66f8.js",
     "static/js/453.d8d62e32.chunk.js": "/sorry_app/static/js/453.d8d62e32.chunk.js",
     "index.html": "/sorry_app/index.html",
     "main.e6c13ad2.css.map": "/sorry_app/static/css/main.e6c13ad2.css.map",
-    "main.5e5a6d4e.js.map": "/sorry_app/static/js/main.5e5a6d4e.js.map",
+    "main.2a3b66f8.js.map": "/sorry_app/static/js/main.2a3b66f8.js.map",
     "453.d8d62e32.chunk.js.map": "/sorry_app/static/js/453.d8d62e32.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.5e5a6d4e.js"
+    "static/js/main.2a3b66f8.js"
   ]
 }
