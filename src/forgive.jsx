@@ -170,7 +170,7 @@ function Forgive_Me({className, setEnd}) {
         <Button
           ref={noButtonRef}
           style={{ position: "absolute", top: noButtonPosition.top, left: noButtonPosition.left }}
-          onClick={() => alert("I'm sorry, I understand!")}>
+          onClick={() => alert("Come on, pleaseee.....Forgive meeee !!!!!")}>
           No
         </Button>
 
