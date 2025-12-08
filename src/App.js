@@ -123,13 +123,13 @@ const App = () => {
   const HomePage = ({ className }) => (
     <Element name="home">
       <Section className={className}>
-        <Title>Heyy Maria {String.fromCodePoint('0x1FAE3')}</Title>
+        <Title>Heyy Julia (Lili ){String.fromCodePoint('0x1FAE3')}</Title>
         <Message>
-          I didnt knew how and what to say so I have created this to apologise for yesterday. {String.fromCodePoint('0x1F607')}
+          Welllll, You I really dont know what to say. {String.fromCodePoint('0x1F607')}
         </Message>
         <HeartIcon/>
         <Button onClick={handleClick}>
-          Click me !!
+          Just Click here !!
         </Button>
       </Section>
     </Element>
@@ -140,10 +140,10 @@ const App = () => {
       <Section className={className}>
         <Title>I am really Sorry</Title>
         <Message>
-          I am really sorry, I know I crossed the line yesterday. {String.fromCodePoint('0x1F972')}
+          I am really sorry, I just like talking to you and I already feel bad since you are angry with me. {String.fromCodePoint('0x1F972')}
         </Message>
         <Message>
-          I really regret it.
+          You know talking to you is addictive 😂😂😂😂😂.
         </Message>
         <HeartIcon/>
         <Button onClick={handleClick}>
@@ -159,9 +159,9 @@ const App = () => {
   const MistakePage = ({ className }) => (
     <Element name="mistake">
       <Section className={className}>
-        <Title>It Was a Mistake</Title>
+        <Title>Pretty little baby...</Title>
         <Message>
-          It really was a mistake. But you are so amazing and beautiful {String.fromCodePoint('0x1FAE0')}, you cant blame me for that {String.fromCodePoint('0x1FAE3')}. I am not a emotionless robot afterall {String.fromCodePoint('0x1F602')}
+          You are sooooo funny and kind and amazing and beautiful {String.fromCodePoint('0x1FAE0')}, how am I supposed to not like you {String.fromCodePoint('0x1FAE3')}. I am not a emotionless robot afterall {String.fromCodePoint('0x1F602')}
         </Message>
         <HeartIcon/>
         <Button onClick={handleClick}>
@@ -176,7 +176,7 @@ const App = () => {
       <Section className={className}>
         <Title>Thank You</Title>
         <Message>
-          Thank you haha. I promise this won't happen again. Lots of kisses for you {String.fromCodePoint('0x1F618')}
+          Thank you haha. But I promise this won't happen again. Lots of kisses for you {String.fromCodePoint('0x1F618')}
         </Message>
         <HeartIcon/>
         <iframe src="https://giphy.com/embed/4YNyqb4VMiIQ8Ipz8n" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
