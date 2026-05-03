@@ -159,7 +159,7 @@ const App = () => {
   const MistakePage = ({ className }) => (
     <Element name="mistake">
       <Section className={className}>
-        <Title>Pretty little baby...</Title>
+        <Title>You are an angel...</Title>
         <Message>
           You are sooooo kind and amazing and beautiful {String.fromCodePoint('0x1FAE0')}, you are a nice friend and I respect you a lot.
         </Message>
