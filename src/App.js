@@ -123,9 +123,9 @@ const App = () => {
   const HomePage = ({ className }) => (
     <Element name="home">
       <Section className={className}>
-        <Title>Heyy Julia (Lili ){String.fromCodePoint('0x1FAE3')}</Title>
+        <Title>Heyy Alejandra {String.fromCodePoint('0x1FAE3')}</Title>
         <Message>
-          Welllll, You I really dont know what to say. {String.fromCodePoint('0x1F607')}
+          Welllll, I really dont know what to say. {String.fromCodePoint('0x1F607')}
         </Message>
         <HeartIcon/>
         <Button onClick={handleClick}>
@@ -143,7 +143,7 @@ const App = () => {
           I am really sorry, I just like talking to you and I already feel bad since you are angry with me. {String.fromCodePoint('0x1F972')}
         </Message>
         <Message>
-          You know talking to you is addictive 😂😂😂😂😂.
+          And I dont us to stop talking because of a misunderstanding.
         </Message>
         <HeartIcon/>
         <Button onClick={handleClick}>
@@ -161,7 +161,7 @@ const App = () => {
       <Section className={className}>
         <Title>Pretty little baby...</Title>
         <Message>
-          You are sooooo funny and kind and amazing and beautiful {String.fromCodePoint('0x1FAE0')}, how am I supposed to not like you {String.fromCodePoint('0x1FAE3')}. I am not a emotionless robot afterall {String.fromCodePoint('0x1F602')}
+          You are sooooo kind and amazing and beautiful {String.fromCodePoint('0x1FAE0')}, you are a nice friend and I respect you a lot.
         </Message>
         <HeartIcon/>
         <Button onClick={handleClick}>
