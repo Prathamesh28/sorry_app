@@ -143,7 +143,7 @@ const App = () => {
           I am really sorry, I just like talking to you and I already feel bad since you are angry with me. {String.fromCodePoint('0x1F972')}
         </Message>
         <Message>
-          And I dont us to stop talking because of a misunderstanding.
+          And I dont want us to stop talking because of a misunderstanding.
         </Message>
         <HeartIcon/>
         <Button onClick={handleClick}>
